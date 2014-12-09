@@ -6,3 +6,8 @@ atom.symlink/storage
 atom.symlink/themes
 
 git/gitconfig.symlink
+
+emacs/emacs.d.symlink/secrets*
+emacs/emacs.d.symlink/local-projects.el
+emacs/emacs.d.symlink/elpa
+emacs/emacs.d.symlink/melpa
