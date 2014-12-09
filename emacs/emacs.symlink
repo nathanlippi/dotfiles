@@ -3,6 +3,6 @@
   (load "~/.emacs.d/my-noexternals.el")
 ))
 
-(load "~/.emacs.d/local-projects.el")
+(load "~/.emacs.d/local-projects.el" 'noerror)
 (load "~/.emacs.d/secrets.el" 'noerror)
 (load "~/.emacs.d/my-theme.el")
