@@ -517,7 +517,7 @@ key.setGlobalKey(["C-c","C-y"], function (aEvent, aArg) {
         ext.exec("hok-yank-foreground-mode", aArg);
 }, "HoK - Background hint mode", true);
 
-key.setGlobalKey(["C-c","C-;"], function (aEvent, aArg) {
+key.setGlobalKey(["C-c","C--"], function (aEvent, aArg) {
         ext.exec("hok-start-extended-mode", aArg);
 }, "HoK - Extented hint mode", true);
 
@@ -525,6 +525,7 @@ key.setGlobalKey(["C-c", "C-e"], function (aEvent, aArg) {
         ext.exec("hok-start-continuous-mode", aArg);
 }, "Start continuous HaH", true);
 
+plugins.options["hok.hint_keys"] = "aoeuidhtns";
 
 // ========================= Config For Tanything ========================== //
 
@@ -534,13 +535,7 @@ key.setViewKey(["C-x", "b"], function (ev, arg) {
 
 // ============================ Config For KKK ============================= //
 
-plugins.options["kkk.sites"] =
-  [
-    // "^https?://gmail\\.com/",
-    // "^https?://github\\.com/",
-    // "^https?://youtube\\.com/",
-    "^https?://.*$" // Trying ALL sites
-  ];
+plugins.options["kkk.sites"] = ["^https?://.*$"];
 
 // ============================ Tidbits =============================
 
