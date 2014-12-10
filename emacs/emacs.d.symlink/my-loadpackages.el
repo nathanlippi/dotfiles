@@ -47,10 +47,6 @@
 (global-set-key (kbd "M-F") 'windmove-right)
 (global-set-key (kbd "M-B") 'windmove-left)
 
-(require 'xclip)
-(xclip-mode 1)
-(setq x-select-enable-clipboard t)
-
 (require 'paren)
 ;; ;; Show matching parentheses
 (show-paren-mode 1)
