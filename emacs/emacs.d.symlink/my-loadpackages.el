@@ -1,4 +1,4 @@
-(load "~/.emacs.d/my-packages.el")
+(load "~/.emacs.d/my-installpackages.el")
 
 ;;;;;;;;;;;;;;;;
 ;; Variables
