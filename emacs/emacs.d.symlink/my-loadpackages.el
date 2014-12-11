@@ -38,14 +38,11 @@
 (autoload 'e2wm:dp-edbi "e2wm-edbi" nil t)
 (require 'edbi)
 
-(require 'windmove)
-
 (global-set-key (kbd "M-P") 'windmove-up)
 (global-set-key (kbd "M-N") 'windmove-down)
 (global-set-key (kbd "M-F") 'windmove-right)
 (global-set-key (kbd "M-B") 'windmove-left)
 
-(require 'web-beautify) ;; Not necessary if using ELPA package
 (eval-after-load 'js2-mode
   '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
 (eval-after-load 'json-mode
@@ -75,54 +72,26 @@
              (lambda ()
                (add-hook 'before-save-hook 'web-beautify-css-buffer t t))))
 
-(require 'paren)
-;; ;; Show matching parentheses
 (show-paren-mode 1)
-
-(require 'yasnippet)
-(yas/global-mode 1) ;; Move this line?
-
-;; (require 'anything)
-(require 'org-install)
 (setq org-log-done t)
 
 (load-library "postack")
 
-;Predictive completion
-(require 'pabbrev "pabbrev.el")
+(require 'pabbrev)
 (global-pabbrev-mode)
 
-(require 'zencoding-mode)
 (zencoding-mode 1)
-(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+(add-hook 'sgml-mode-hook 'zencoding-mode)
 
-;Tramp: Apparently allows you to edit files remotely... let's see
-(require 'tramp)
-(setq tramp-default-method "scp")
-
-;This should turn on linum by default
-(require 'linum)
 (global-linum-mode)
 
-;This function allows you to toggle linum-mode
-(autoload 'linum-mode "linum" "toggle line numbers on/off" t)
-
-;;PHP stuff
-(require 'php-mode)
-
 ;;To use abbrev-mode, add lines like this:
-  (add-hook 'php-mode-hook
-    '(lambda () (define-abbrev php-mode-abbrev-table "ex" "extends")))
+(add-hook 'php-mode-hook
+  '(lambda () (define-abbrev php-mode-abbrev-table "ex" "extends")))
 
-(require 'flymake-jshint)
 (add-hook 'js-mode-hook 'flymake-jshint-load)
-(setq jshint-configuration-path "/home/nathan/Dropbox/emacs/js-hint-config.json")
-
-(require 'flymake-php)
 (add-hook 'php-mode-hook 'flymake-php-load)
 
-;; uniquify changes conflicting buffer names from file<2> etc
-(require 'uniquify)
 ;; uniquify changes conflicting buffer names from file<2> etc
 (setq uniquify-buffer-name-style 'reverse)
 (setq uniquify-separator "/")
@@ -145,7 +114,6 @@
 (defun current-dir-name ()
   (nth 1 (split-string (pwd) "Directory ")))
 
-(require 'magit)
 (global-set-key (kbd "C-x m")
   '(lambda () (interactive) (magit-status (current-dir-name))))
 
