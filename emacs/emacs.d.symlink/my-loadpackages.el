@@ -22,7 +22,6 @@
 (setq edbi:query-result-column-max-width 100)
 (setq edbi:dbview-show-table-data-default-limit 10)
 (autoload 'e2wm:dp-edbi "e2wm-edbi" nil t)
-(require 'edbi)
 
 ;; uniquify changes conflicting buffer names from file<2> etc
 (setq uniquify-buffer-name-style 'reverse)
@@ -36,7 +35,7 @@
 
 (load-library "postack")
 (require 'pabbrev)
-
+(require 'edbi)
 
 ;;;;;;;;;;;;;;;;
 ;; Defuns
