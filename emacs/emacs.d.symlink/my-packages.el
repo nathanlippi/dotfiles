@@ -9,6 +9,7 @@
 
 (defvar required-packages
   '(
+    anything
     color-theme-sanityinc-tomorrow
     edbi
     flymake-css
@@ -16,7 +17,10 @@
     flymake-jshint
     flymake-php
     js2-mode
+    key-chord
+    kill-ring-search
     magit
+    pabbrev
     php-mode
     slime
     yasnippet
