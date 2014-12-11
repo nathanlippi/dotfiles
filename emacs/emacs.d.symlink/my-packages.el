@@ -1,6 +1,6 @@
 (require 'cl)
-
 (require 'package)
+
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.milkbox.net/packages/") t)
 (add-to-list 'package-archives
@@ -46,11 +46,3 @@
       (package-install p))))
 
 (add-to-list 'load-path "~/.emacs.d/")
-
-;; Kill Ring Search
-(autoload 'kill-ring-search "kill-ring-search"
-  "Search the kill ring in the minibuffer."
-  (interactive))
-
-;; Kill ring search!
-(global-set-key "\M-\C-y" 'kill-ring-search)

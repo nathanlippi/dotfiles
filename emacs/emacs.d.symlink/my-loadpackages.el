@@ -154,3 +154,5 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.jade$" . sws-mode))
 (add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))
+
+(global-set-key "\M-\C-y" 'kill-ring-search)
