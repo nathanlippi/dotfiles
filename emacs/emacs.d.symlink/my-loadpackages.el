@@ -1,5 +1,3 @@
-; ~/.emacs.d/my-loadpackages.el
-; loading package
 (load "~/.emacs.d/my-packages.el")
 
 (setq split-width-threshold 300)
@@ -46,6 +44,36 @@
 (global-set-key (kbd "M-N") 'windmove-down)
 (global-set-key (kbd "M-F") 'windmove-right)
 (global-set-key (kbd "M-B") 'windmove-left)
+
+(require 'web-beautify) ;; Not necessary if using ELPA package
+(eval-after-load 'js2-mode
+  '(define-key js2-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'json-mode
+  '(define-key json-mode-map (kbd "C-c b") 'web-beautify-js))
+(eval-after-load 'sgml-mode
+  '(define-key html-mode-map (kbd "C-c b") 'web-beautify-html))
+(eval-after-load 'css-mode
+  '(define-key css-mode-map (kbd "C-c b") 'web-beautify-css))
+
+(eval-after-load 'js2-mode
+  '(add-hook 'js2-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+
+(eval-after-load 'json-mode
+  '(add-hook 'json-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-js-buffer t t))))
+
+(eval-after-load 'sgml-mode
+  '(add-hook 'html-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-html-buffer t t))))
+
+(eval-after-load 'css-mode
+  '(add-hook 'css-mode-hook
+             (lambda ()
+               (add-hook 'before-save-hook 'web-beautify-css-buffer t t))))
 
 (require 'paren)
 ;; ;; Show matching parentheses
@@ -114,8 +142,6 @@
           "M-x "
           (all-completions "" obarray 'commandp))))))
 
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-
 (defun current-dir-name ()
   (nth 1 (split-string (pwd) "Directory ")))
 
@@ -123,5 +149,8 @@
 (global-set-key (kbd "C-x m")
   '(lambda () (interactive) (magit-status (current-dir-name))))
 
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . sgml-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(add-to-list 'auto-mode-alist '("\\.jade$" . jade-mode))
+(add-to-list 'auto-mode-alist '("\\.jade$" . sws-mode))
+(add-to-list 'auto-mode-alist '("\\.styl$" . stylus-mode))

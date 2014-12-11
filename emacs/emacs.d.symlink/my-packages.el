@@ -15,10 +15,12 @@
     flymake-cursor
     flymake-jshint
     flymake-php
+    js2-mode
     magit
     php-mode
     slime
     yasnippet
+    web-beautify
     zencoding-mode
   ) "a list of packages to ensure are installed at launch.")
 
