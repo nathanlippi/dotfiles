@@ -34,8 +34,9 @@
 ;; Require / Loads
 
 (load-library "postack")
-(require 'pabbrev)
+(require 'auto-complete-config)
 (require 'edbi)
+(require 'expand-region)
 
 ;;;;;;;;;;;;;;;;
 ;; Defuns
@@ -51,9 +52,9 @@
 (global-hl-line-mode +1)
 (show-paren-mode 1)
 (setq org-log-done t)
-(global-pabbrev-mode)
 (zencoding-mode 1)
 (global-linum-mode)
+(ac-config-default)
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -140,3 +141,5 @@
   '(lambda () (interactive) (magit-status (current-dir-name))))
 
 (global-set-key "\M-\C-y" 'kill-ring-search)
+
+(global-set-key (kbd "C-=") 'er/expand-region)

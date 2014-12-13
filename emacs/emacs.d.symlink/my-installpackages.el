@@ -7,7 +7,7 @@
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
-(defvar required-packages '( anything
+(defvar required-packages '( anything ac-html ac-js2 auto-complete
   color-theme-sanityinc-tomorrow edbi flymake-css flymake-cursor
   flymake-jshint flymake-php js2-mode key-chord kill-ring-search
   magit pabbrev php-mode slime yasnippet web-beautify
