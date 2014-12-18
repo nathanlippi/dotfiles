@@ -28,10 +28,6 @@
 
 (add-to-list 'same-window-buffer-names "*SQL*")
 
-;; Make indentation closer to what I am used to
-(setq c-default-style "bsd"
-      c-basic-offset 4)
-
 ;; http://stackoverflow.com/questions/11623189/how-to-bind-keys-to-indent-unindent-region-in-emacs
 (defun my-indent-region (spaces)
   (interactive "p")
