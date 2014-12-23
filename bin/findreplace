@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Find and replace, recursively.
+
+if [ $# == 2 ]; then
+  echo "Replacing $1 with $2"
+  find ./ -type f -exec sed -i "s/$1/$2/g" {} \;
+else
+  echo "Must have 2 arguments"
+fi
