@@ -23,12 +23,10 @@
 (setq edbi:dbview-show-table-data-default-limit 10)
 (autoload 'e2wm:dp-edbi "e2wm-edbi" nil t)
 
-;; uniquify changes conflicting buffer names from file<2> etc
-(setq uniquify-buffer-name-style 'reverse)
-(setq uniquify-separator "/")
+(setq uniquify-buffer-name-style 'post-forward)
+(setq uniquify-separator "|")
 (setq uniquify-after-kill-buffer-p t) ; rename after killing uniquified
 (setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
-
 
 ;;;;;;;;;;;;;;;;
 ;; Require / Loads
@@ -37,6 +35,7 @@
 (require 'auto-complete-config)
 (require 'edbi)
 (require 'expand-region)
+(require 'uniquify)
 
 ;;;;;;;;;;;;;;;;
 ;; Defuns
