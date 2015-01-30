@@ -12,7 +12,8 @@
 ;Font size
 (set-face-attribute 'default nil :height 90)
 
-;Enable ido-mode
+;; Ido-mode
+(setq ido-default-buffer-method 'selected-window)
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 
