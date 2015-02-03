@@ -135,7 +135,7 @@ bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
 
 # http://blog.kaiserapps.com/2014/02/dynamic-tagging-in-i3.html
 bindsym $mod+m exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/go_to_workspace.py
-bindsym $mod+Shift+m exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/move_to_workspace.py
+bindsym $mod+Shift+m exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/switch_workspace.py
 bindsym $mod+Shift+Control+m exec i3-input -F 'rename workspace to "%s"' -P 'New workspace name: ' 
 
 # Move focus to monitor:
