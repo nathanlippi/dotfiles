@@ -69,16 +69,17 @@ bindsym $mod+a focus parent
 bindsym $mod+e focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 exec ~/.i3/set_workspace_active_display.py 1
+bindsym $mod+2 exec ~/.i3/set_workspace_active_display.py 2
+bindsym $mod+3 exec ~/.i3/set_workspace_active_display.py 3
+bindsym $mod+4 exec ~/.i3/set_workspace_active_display.py 4
+bindsym $mod+5 exec ~/.i3/set_workspace_active_display.py 5
+bindsym $mod+6 exec ~/.i3/set_workspace_active_display.py 6
+bindsym $mod+7 exec ~/.i3/set_workspace_active_display.py 7
+bindsym $mod+8 exec ~/.i3/set_workspace_active_display.py 8
+bindsym $mod+9 exec ~/.i3/set_workspace_active_display.py 9
+bindsym $mod+10 exec ~/.i3/set_workspace_active_display.py 10
+
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace 1
@@ -127,9 +128,8 @@ workspace_auto_back_and_forth yes
 # Screenshot
 bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
 
-# http://blog.kaiserapps.com/2014/02/dynamic-tagging-in-i3.html
-bindsym $mod+m exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/go_to_workspace.py
-bindsym $mod+Shift+m exec ~/.i3/get_workspace_options.py | dmenu -b | ~/.i3/switch_workspace.py
+bindsym $mod+Shift+m exec ~/.i3/send_active_container_chosen_display.py
+bindsym $mod+m exec ~/.i3/choose_workspace_active_display.py
 bindsym $mod+Shift+Control+m exec i3-input -F 'rename workspace to "%s"' -P 'New workspace name: ' 
 
 # Move focus to monitor:
@@ -143,8 +143,6 @@ bindsym $mod+Shift+v move workspace to output $center
 bindsym $mod+Shift+z move workspace to output $right
 
 exec --no-startup-id triple
-
-# exec --no-startup-id feh --bg-fill ~/Dropbox/currentWallpaper.jpg
 
 assign [class="Skype"] chat
 
