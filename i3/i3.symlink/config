@@ -62,12 +62,6 @@ bindsym $mod+o layout stacking
 bindsym $mod+comma layout tabbed
 bindsym $mod+period layout toggle split
 
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle 
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
 # focus the parent container
 bindsym $mod+a focus parent
 
@@ -153,3 +147,6 @@ exec --no-startup-id triple
 # exec --no-startup-id feh --bg-fill ~/Dropbox/currentWallpaper.jpg
 
 assign [class="Skype"] chat
+
+bindsym $mod+minus move scratchpad # Assigns scratchpad
+bindsym $mod+space scratchpad show
