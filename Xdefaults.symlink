@@ -1,0 +1,4 @@
+*background: #222222
+*foreground: #777777
+
+URxvt*scrollBar: false
