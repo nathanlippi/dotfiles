@@ -151,3 +151,5 @@ bindsym $mod+Shift+z move workspace to output $right
 exec --no-startup-id triple
 
 # exec --no-startup-id feh --bg-fill ~/Dropbox/currentWallpaper.jpg
+
+assign [class="Skype"] chat
