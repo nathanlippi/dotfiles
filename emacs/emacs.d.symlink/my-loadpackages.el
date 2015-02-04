@@ -35,7 +35,6 @@
 (load-library "postack")
 (require 'auto-complete-config)
 (require 'edbi)
-(require 'expand-region)
 (require 'uniquify)
 
 ;;;;;;;;;;;;;;;;
