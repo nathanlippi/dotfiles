@@ -146,5 +146,6 @@ exec --no-startup-id triple
 
 assign [class="Skype"] chat
 
-bindsym $mod+minus move scratchpad # Assigns scratchpad
+# Assigns scratchpad
+bindsym $mod+minus move scratchpad
 bindsym $mod+space scratchpad show
