@@ -152,3 +152,7 @@ bindsym $mod+space scratchpad show
 
 focus_follows_mouse no
 
+exec xrandr --output $left --right-of $center --right-of $right
+exec xrandr --output DVI-0 --left-of HDMI-0
+exec xrandr --output HDMI-0 --left-of VGA-0
+exec xrandr --output VGA-0
