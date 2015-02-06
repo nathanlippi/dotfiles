@@ -149,3 +149,6 @@ assign [class="Skype"] chat
 # Assigns scratchpad
 bindsym $mod+minus move scratchpad
 bindsym $mod+space scratchpad show
+
+focus_follows_mouse no
+
