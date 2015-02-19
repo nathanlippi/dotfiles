@@ -122,9 +122,6 @@ bar {
         position top
 }
 
-# Double tap workspace number to visit old one
-workspace_auto_back_and_forth yes
-
 # Screenshot
 bindsym --release $mod+x exec --no-startup-id import /tmp/latest-screenshot.png
 
