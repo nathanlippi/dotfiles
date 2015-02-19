@@ -7,11 +7,29 @@
              '("marmalade" . "http://marmalade-repo.org/packages/") t)
 (package-initialize)
 
-(defvar required-packages '( anything ac-html ac-js2 auto-complete
-  color-theme-sanityinc-tomorrow edbi flymake-css flymake-cursor
-  flymake-jshint flymake-php js2-mode key-chord kill-ring-search
-  magit nodejs-repl pabbrev php-mode slime yasnippet web-beautify
-  zencoding-mode )
+(defvar required-packages
+  '(
+    anything
+    ac-html
+    ac-js2
+    auto-complete
+    color-theme-sanityinc-tomorrow
+    edbi
+    flymake-css
+    flymake-cursor
+    flymake-jshint
+    flymake-php
+    js2-mode
+    key-chord
+    kill-ring-search
+    magit
+    nodejs-repl
+    pabbrev php-mode
+    slime
+    yasnippet
+    web-beautify
+    zencoding-mode
+  )
   "a list of packages to ensure are installed at launch.")
 
 (defun all-packages-installed-p ()
