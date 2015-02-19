@@ -19,6 +19,7 @@
     flymake-cursor
     flymake-jshint
     flymake-php
+    helm-projectile
     js2-mode
     key-chord
     kill-ring-search

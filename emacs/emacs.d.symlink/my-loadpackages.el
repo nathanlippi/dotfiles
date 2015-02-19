@@ -29,6 +29,8 @@
 (setq uniquify-after-kill-buffer-p t) ; rename after killing uniquified
 (setq uniquify-ignore-buffers-re "^\\*") ; don't muck with special buffers
 
+(setq projectile-completion-system 'helm)
+
 ;;;;;;;;;;;;;;;;
 ;; Require / Loads
 
@@ -54,6 +56,8 @@
 (zencoding-mode 1)
 (global-linum-mode)
 (ac-config-default)
+(projectile-global-mode)
+(helm-projectile-on)
 
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
