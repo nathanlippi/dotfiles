@@ -180,9 +180,8 @@
 (global-set-key (kbd "C-M-g") 'goto-line) ;; Does not work in terminal
 (global-set-key (kbd "C-q") 'line-text-up-with-parentheses-above)
 
-;; ; Allows you to push and pop positionjs
-(global-set-key "\C-cm" 'postack-push)
-(global-set-key "\C-cp" 'postack-pop) ;; Conflicted w/ projectile
+(global-set-key (kbd "C-'") 'postack-push)
+(global-set-key (kbd "C-,") 'postack-pop)
 
 ;; Word wrapping
 (global-set-key (kbd "C-<f2>") 'toggle-truncate-lines)
