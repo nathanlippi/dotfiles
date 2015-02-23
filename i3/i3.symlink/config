@@ -139,8 +139,6 @@ bindsym $mod+Shift+w move workspace to output $left
 bindsym $mod+Shift+v move workspace to output $center
 bindsym $mod+Shift+z move workspace to output $right
 
-exec --no-startup-id triple
-
 assign [class="Skype"] chat
 
 # Assigns scratchpad
