@@ -117,8 +117,8 @@
   "Call `kill-region’ or `backward-kill-word’ depending on whether or not a region is selected."
   (interactive)
   (if (and transient-mark-mode mark-active)
-  (kill-region (point) (mark))
-  (backward-kill-word 1)))
+    (kill-region (point) (mark))
+    (backward-kill-word 1)))
 
 (defun line-text-up-with-char-above(charval)
   (interactive)
