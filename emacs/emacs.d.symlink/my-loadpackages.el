@@ -51,6 +51,8 @@
 
 (ido-mode 1)
 (global-hl-line-mode +1)
+(set-face-underline-p 'highlight nil)
+(set-face-background hl-line-face "orange4")
 (show-paren-mode 1)
 (setq org-log-done t)
 (zencoding-mode 1)
