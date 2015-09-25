@@ -31,6 +31,16 @@
 
 (setq projectile-completion-system 'helm)
 
+
+(autoload 'jscs-indent-apply "jscs" nil t)
+(autoload 'jscs-fix "jscs" nil t)
+(autoload 'jscs-fix-before-save "jscs" nil t)
+
+(add-hook 'before-save-hook #'jscs-fix-before-save)
+
+(with-eval-after-load 'js2-mode
+  (add-hook 'js2-mode-hook #'jscs-indent-apply))
+
 ;;;;;;;;;;;;;;;;
 ;; Require / Loads
 
